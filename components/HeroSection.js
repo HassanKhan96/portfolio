@@ -1,24 +1,19 @@
 const HeroSection = () => {
   return (
-    <div className="container mx-auto mt-[5rem]">
-      <div className="grid md:grid-cols-3">
-        <div className="flex justify-center items-center">
-          <img
-            src="/avatar.jpeg"
-            className="rounded-full object-cover w-[15rem] h-[15rem]"
-          />
-        </div>
-        <div className="md:col-span-2 p-5 flex justify-center items-center lg:justify-start  font-sans text-[#2F4858] lg:text-4xl text-xl">
-          <div className="h-fit">
-            <div>
-              Hello, I'm{" "}
-              <span className="text-[#007560] font-semibold">
-                Muhammad Hassan
-              </span>
-              .
-            </div>
-            <div>I'm a MERN-stack developer.</div>
+    <div className="w-screen h-screen bg-cover bg-none bg-no-repeat md:bg-[url('/bg_circle.svg')]" >
+      <div className="h-full flex flex-col-reverse md:flex-row justify-center md:justify-evenly items-center font-poppins text-textColor lg:text-4xl text-2xl">
+        <div className="h-fit pt-12 md:pt-0">
+          <div>
+            Hello, I'm{" "}
+            <span className="text-primary font-semibold">
+              Muhammad Hassan
+            </span>
+            .
           </div>
+          <div>I'm a MERN-stack developer.</div>
+        </div>
+        <div>
+          <img src="/hero_graphics.svg" className="w-60 lg:w-80 opacity-90" />
         </div>
       </div>
     </div>
