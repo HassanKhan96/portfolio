@@ -4,7 +4,7 @@ import SkillSection from "../components/SkillsSection";
 
 export default function Home() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid bg-bgColor">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
