@@ -10,12 +10,18 @@ const SkillSection = () => {
       </div>
       <div className="flex flex-col sm:flex-col-reverse md:flex-row md:justify-evenly mt-10 md:mt-20">
         <div className="md:w-3/5 mt-5">
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 justify-center text-primary">
-            <SkillBox
-              name="React"
-              icon={<SiReact size={50} />}
-              rating={7}
-            />
+          {/* <div className="grid sm:grid-cols-2 md:grid-cols-4 justify-center text-primary"> */}
+          <div className="flex gap-x-2 gap-y-4 flex-wrap text-primary">
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
+            <SkillBox name="React" icon={<SiReact size={20} />} rating={7} />
           </div>
         </div>
         <div className="md:w-2/5 flex justify-center">
