@@ -1,0 +1,49 @@
+.textAnimation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background-color: #6c63ff;
+  animation: headingKeyFrames 0.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+}
+
+.textAnimation::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background-color: #484554;
+  animation: headingKeyFrames 0.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) 0.25s
+    forwards;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards 0.5s;
+}
+
+@keyframes headingKeyFrames {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
