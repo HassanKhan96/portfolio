@@ -1,6 +1,6 @@
 <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <g fill="none" stroke="#A256E7" stroke-width="2">
-<circle stroke-opacity="10%" r="84" cx="320" cy="348"></circle>
+<circle stroke-opacity="10%" r="84" cx="320" cy="308"></circle>
 <circle stroke-opacity="10%" r="36" cx="689" cy="87"></circle>
 <circle stroke-opacity="10%" r="39" cx="330" cy="95"></circle>
 </g>
@@ -8,6 +8,6 @@
 <circle fill-opacity="10%" r="60" cx="95" cy="259"></circle>
 <circle fill-opacity="10%" r="40" cx="484" cy="160"></circle>
 <circle fill-opacity="10%" r="93" cx="91" cy="30"></circle>
-<circle fill-opacity="10%" r="37" cx="600" cy="385"></circle>
+<circle fill-opacity="10%" r="37" cx="600" cy="355"></circle>
 </g>
 </svg>

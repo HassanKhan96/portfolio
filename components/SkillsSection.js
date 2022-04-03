@@ -19,41 +19,35 @@ import styles from "../styles/Animation.module.css";
 const SkillSection = () => {
   const iconSize = 26;
 
-  const { ref: expertiseRef, inView: isExpertiseVisible } = useInView({
-    threshold: 0.7,
-    triggerOnce: true,
-  });
-  const { ref: frameworksRef, inView: isFrameworksVisible } = useInView({
-    threshold: 0.7,
-    triggerOnce: true,
-  });
-  const { ref: dbRef, inView: isDbVisible } = useInView({
-    threshold: 0.7,
+  const { ref: skillRef, inView: isSkillVisible } = useInView({
+    threshold: 0.5,
     triggerOnce: true,
   });
 
+
   return (
-    <div className="container-fluid mx-auto h-screen p-5 md:p-10">
-      <div className="font-poppins text-4xl md:text-6xl text-center font-bold text-primary">
-        Skills
-      </div>
-      <div className="flex flex-col sm:flex-col md:flex-row md:justify-evenly mt-10 md:mt-20">
-        <div className="w-full md:w-3/5">
-          <div className="mb-7" ref={expertiseRef}>
+    <div className="container-fluid mx-auto h-screen px-5 md:px-5" ref={skillRef}>
+      <h1
+        className={`font-poppins text-4xl w-fit font-bold md:text-6xl mx-auto text-black relative  ${isSkillVisible ? styles.textAnimation : ""}
+      `}>
+        <span className={`underline underline-offset-8 opacity-0 ${isSkillVisible ? styles.fadeIn : null}`}> Skills</span>
+      </h1>
+      <div
+        className={`flex flex-col sm:flex-col md:flex-row md:justify-evenly mt-10 md:mt-20 
+        transition-all delay-100 duration-[1500ms] ${isSkillVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}
+      `}>
+        <div className="w-full md:w-full md:flex md:flex-wrap md:gap-x-20">
+          <div className="mb-7">
             <div
-              className={`font-poppins text-black font-bold mb-2 text-2xl relative w-fit opacity-0 ${
-                isExpertiseVisible ? styles.textAnimation + " opacity-100" : ""
-              }`}
+              className="font-poppins text-black font-bold mb-2 text-2xl relative w-fit"
             >
-              <span className={isExpertiseVisible ? styles.fadeIn : ""}>
+              <span>
                 Expertise
               </span>
             </div>
             <div className="flex justify-center md:justify-start">
               <div
-                className={`flex gap-x-5 gap-y-5 flex-wrap text-primary opacity-0 transition-all duration-[1s] delay-[100ms] translate-y-10 ${
-                  isExpertiseVisible ? "translate-y-0 opacity-100" : ""
-                }`}
+                className="flex w-full gap-x-5 gap-y-5 flex-wrap text-primary"
               >
                 <SkillBox
                   name="React JS"
@@ -89,25 +83,17 @@ const SkillSection = () => {
             </div>
           </div>
 
-          <div className="mb-7" ref={frameworksRef}>
+          <div className="mb-7">
             <div
-              className={`font-poppins text-2xl text-black font-bold mb-2 relative w-fit opacity-0
-                ${
-                  isFrameworksVisible
-                    ? styles.textAnimation + " opacity-100"
-                    : ""
-                }`}
+              className="font-poppins text-2xl text-black font-bold mb-2 relative w-fit"
             >
-              <span className={isFrameworksVisible ? styles.fadeIn : ""}>
+              <span>
                 Frameworks
               </span>
             </div>
             <div className="flex justify-center md:justify-start">
               <div
-                className={`flex gap-x-5 gap-y-5 flex-wrap text-primary opacity-0 transition-all duration-[1s] delay-[100ms] translate-y-10 ${
-                  isFrameworksVisible ? "translate-y-0 opacity-100" : ""
-                }`}
-              >
+                className="flex gap-x-5 gap-y-5 flex-wrap w-full text-primary">
                 <SkillBox
                   name="Express JS"
                   icon={<SiExpress size={iconSize} />}
@@ -132,22 +118,16 @@ const SkillSection = () => {
             </div>
           </div>
 
-          <div className="mb-7" ref={dbRef}>
+          <div className="mb-7">
             <div
-              className={`font-poppins text-2xl text-black font-bold w-fit relative opacity-0 mb-2 ${
-                isDbVisible ? styles.textAnimation + " opacity-100" : ""
-              }`}
-            >
-              <span className={isDbVisible ? styles.fadeIn : ""}>
+              className="font-poppins text-2xl text-black font-bold w-fit relative mb-2">
+              <span>
                 Databases
               </span>
             </div>
             <div className="flex justify-center md:justify-start">
               <div
-                className={`flex gap-x-5 gap-y-5 w-full flex-wrap text-primary opacity-0 transition-all duration-[1s] delay-[100ms] translate-y-10 ${
-                  isDbVisible ? "translate-y-0 opacity-100" : ""
-                }`}
-              >
+                className="flex gap-x-5 gap-y-5 w-full flex-wrap text-primary">
                 <SkillBox
                   name="MongoDB"
                   icon={<SiMongodb size={iconSize} />}
@@ -163,11 +143,11 @@ const SkillSection = () => {
           </div>
         </div>
 
-        <div className="hidden md:w-2/5 md:flex justify-center">
+        {/* <div className="hidden md:w-2/5 md:flex justify-center">
           <div className="w-20 md:w-40">
             <img src="/skill_graphics.svg" className="w-full h-full" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
