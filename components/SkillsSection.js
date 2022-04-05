@@ -27,27 +27,24 @@ const SkillSection = () => {
 
   return (
     <div className="container-fluid mx-auto h-screen px-5 md:px-5" ref={skillRef}>
-      <h1
-        className={`font-poppins text-4xl w-fit font-bold md:text-6xl mx-auto text-black relative  ${isSkillVisible ? styles.textAnimation : ""}
-      `}>
-        <span className={`underline underline-offset-8 opacity-0 ${isSkillVisible ? styles.fadeIn : null}`}> Skills</span>
-      </h1>
+
       <div
-        className={`flex flex-col sm:flex-col md:flex-row md:justify-evenly mt-10 md:mt-20 
-        transition-all delay-100 duration-[1500ms] ${isSkillVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}
+        className={`flex flex-col sm:flex-col-reverse lg:flex-row lg:justify-evenly mt-10 md:mt-20 
+        transition-all delay-75 duration-[1500ms] ${isSkillVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}
       `}>
-        <div className="w-full md:w-full md:flex md:flex-wrap md:gap-x-20">
-          <div className="mb-7">
+
+        <div className="w-full md:gap-x-20 lg:w-2/4">
+          <div className="mb-12">
             <div
-              className="font-poppins text-black font-bold mb-2 text-2xl relative w-fit"
+              className="font-poppins text-black font-bold text-3xl relative w-fit"
             >
-              <span>
+              <span className="underline underline-offset-8">
                 Expertise
               </span>
             </div>
             <div className="flex justify-center md:justify-start">
               <div
-                className="flex w-full gap-x-5 gap-y-5 flex-wrap text-primary"
+                className="flex w-full pt-8 gap-x-5 gap-y-5 flex-wrap text-primary"
               >
                 <SkillBox
                   name="React JS"
@@ -83,17 +80,17 @@ const SkillSection = () => {
             </div>
           </div>
 
-          <div className="mb-7">
+          <div className="mb-12">
             <div
-              className="font-poppins text-2xl text-black font-bold mb-2 relative w-fit"
+              className="font-poppins text-3xl text-black font-bold relative w-fit"
             >
-              <span>
+              <span className="underline-offset-8 underline">
                 Frameworks
               </span>
             </div>
             <div className="flex justify-center md:justify-start">
               <div
-                className="flex gap-x-5 gap-y-5 flex-wrap w-full text-primary">
+                className="flex gap-x-5 gap-y-5 flex-wrap w-full pt-8 text-primary">
                 <SkillBox
                   name="Express JS"
                   icon={<SiExpress size={iconSize} />}
@@ -118,16 +115,16 @@ const SkillSection = () => {
             </div>
           </div>
 
-          <div className="mb-7">
+          <div className="mb-12">
             <div
-              className="font-poppins text-2xl text-black font-bold w-fit relative mb-2">
-              <span>
+              className="font-poppins text-3xl text-black font-bold w-fit relative">
+              <span className="underline underline-offset-8">
                 Databases
               </span>
             </div>
             <div className="flex justify-center md:justify-start">
               <div
-                className="flex gap-x-5 gap-y-5 w-full flex-wrap text-primary">
+                className="flex gap-x-5 gap-y-5 w-full pt-8 flex-wrap text-primary">
                 <SkillBox
                   name="MongoDB"
                   icon={<SiMongodb size={iconSize} />}
@@ -143,11 +140,20 @@ const SkillSection = () => {
           </div>
         </div>
 
-        {/* <div className="hidden md:w-2/5 md:flex justify-center">
-          <div className="w-20 md:w-40">
-            <img src="/skill_graphics.svg" className="w-full h-full" />
+        <div className="w-full lg:w-2/4 flex flex-col px-2 lg:px-10 mb-5 items-center">
+          <div className="text-center mb-5">
+            <h1 className="font-poppins font-bold text-black text-3xl underline underline-offset-8">About Me</h1>
           </div>
-        </div> */}
+          <div className="w-[250px] h-[250px] my-10 rounded-full overflow-hidden">
+            <img src="/avatar.jpeg" className="w-full h-full object-cover" />
+          </div>
+          <div className="w-full font-light">
+            I am a MERN stack developer with 2 years of overall experience in React Native, React JS, Node JS and MongoDB.
+            I have created complex projects and worked on apps with more than 20k lines of code.
+            I am constantly working on new projects and learning new skills.
+            I have worked with dozens of JavaScript libraries and frameworks.
+          </div>
+        </div>
       </div>
     </div>
   );
