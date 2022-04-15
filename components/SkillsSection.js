@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import {
   SiReact,
@@ -14,19 +13,16 @@ import {
   SiMysql,
 } from "react-icons/si";
 import SkillBox from "./skill/SkillBox";
-import styles from "../styles/Animation.module.css";
 
 const SkillSection = () => {
   const iconSize = 26;
 
   const { ref: skillRef, inView: isSkillVisible } = useInView({
-    threshold: 0.5,
     triggerOnce: true,
   });
 
-
   return (
-    <div className="container-fluid mx-auto h-screen px-5 md:px-5" ref={skillRef}>
+    <div className="container-fluid mx-auto h-fit px-5 md:px-5" ref={skillRef}>
 
       <div
         className={`flex flex-col sm:flex-col-reverse lg:flex-row lg:justify-evenly mt-10 md:mt-20 
