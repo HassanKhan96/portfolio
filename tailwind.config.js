@@ -60,7 +60,7 @@ module.exports = {
       bgSecondary: "#FCF7FF",
       primary: "#6C63FF",
       primaryDark: "#3c378a",
-      secondary: "#B3A7DD",
+      secondary: "#A256E7",
       darkBlack: "#050505",
       black: "#2F4858",
       white: "#ffffff",

@@ -5,7 +5,7 @@ import SkillSection from "../components/SkillsSection";
 
 export default function Home() {
   return (
-    <div className="container mx-auto bg-bgColor">
+    <div className="container xl:px-20 mx-auto bg-bgColor">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
