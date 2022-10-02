@@ -1,9 +1,14 @@
 import Head from "next/head";
+import { useRef } from "react";
 import HeroSection from "../components/HeroSection";
 import Projects from "../components/Projects";
 import SkillSection from "../components/SkillsSection";
 
 export default function Home() {
+  let clickRef = useRef();
+  const scrollToView = (ref) => {
+    if (ref?.current) clickRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="container xl:px-20 mx-auto bg-bgColor">
       <Head>
@@ -14,8 +19,8 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <HeroSection />
-      <SkillSection />
+      <HeroSection onClick={() => scrollToView(clickRef)} />
+      <SkillSection clickRef={clickRef} />
       <Projects />
     </div>
   );

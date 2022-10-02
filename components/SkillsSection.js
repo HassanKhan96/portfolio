@@ -15,11 +15,12 @@ import {
 import SkillBox from "./skill/SkillBox";
 import SkillBg from "./graphics/SkillBg";
 
-const SkillSection = () => {
+const SkillSection = ({ clickRef }) => {
   const iconSize = 26;
 
   const { ref: skillRef, inView: isSkillVisible } = useInView({
     triggerOnce: true,
+    threshold: 0.2,
   });
 
   return (
@@ -27,12 +28,13 @@ const SkillSection = () => {
       className="container-fluid mx-auto relative h-fit px-5 md:px-5"
       ref={skillRef}
     >
+      <div ref={clickRef}></div>
       <div
-        className={`absolute top-0 bottom-0 left-0 right-0 z-0 sm:opacity-0
+        className={`absolute top-0 bottom-0 left-0 right-0 z-0 xs:opacity-0
         transition-all delay-500 duration-[1000ms] ${
           isSkillVisible
-            ? "translate-x-0 lg:opacity-20"
-            : "translate-x-20 opacity-0"
+            ? "lg:translate-x-0  lg:opacity-20"
+            : "lg:translate-x-20 opacity-0"
         }
       `}
       >

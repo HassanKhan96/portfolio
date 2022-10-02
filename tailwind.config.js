@@ -43,6 +43,7 @@ module.exports = {
     },
     // prettier-ignore
     screens: {
+      'xs': '150px',
       'sm': "368px",
       'md': "768px",
       'lg': "1024px",

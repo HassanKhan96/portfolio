@@ -2,7 +2,7 @@ import Header from "./Header";
 import { BsArrowDown } from "react-icons/bs";
 import HeroGraphics from "./graphics/hero_graphics";
 import TypewriterComponent from "typewriter-effect";
-const HeroSection = () => {
+const HeroSection = ({ onClick = () => null }) => {
   return (
     <div className="h-screen bg-cover bg-none bg-no-repeat md:bg-[url('/bg_circle.svg')]">
       <Header />
@@ -30,7 +30,10 @@ const HeroSection = () => {
             />
           </div>
 
-          <div className="mt-10 sm:text-lg md:text-xl lg:text-2xl font-normal flex justify-center items-center text-primary">
+          <div
+            className="mt-10 sm:text-lg md:text-xl lg:text-2xl font-normal flex justify-center items-center text-primary"
+            onClick={onClick}
+          >
             <span className="mr-0 animate-bounce">
               <BsArrowDown size={20} />
             </span>
