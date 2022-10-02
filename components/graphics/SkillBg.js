@@ -25,7 +25,7 @@ const SkillBg = () => {
             d="M0 -26.7L23.1 -13.3L23.1 13.3L0 26.7L-23.1 13.3L-23.1 -13.3Z"
             fill="none"
             className="stroke-primary"
-            stroke-width="2"
+            strokeWidth="2"
           ></path>
         </g>
         <g transform="translate(434 430)">
@@ -33,7 +33,7 @@ const SkillBg = () => {
             d="M0 -24L20.8 -12L20.8 12L0 24L-20.8 12L-20.8 -12Z"
             fill="none"
             className="stroke-primary"
-            stroke-width="2"
+            strokeWidth="2"
           ></path>
         </g>
       </g>
